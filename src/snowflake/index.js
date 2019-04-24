@@ -2,13 +2,13 @@
  * @Author: liqi@hiynn.com
  * @Date: 2018-08-16 14:29:15
  * @Description: 雪花
- * @Last Modified by: liqi@hiynn.com
- * @Last Modified time: 2018-08-16 14:51:02
+ * @Last Modified by: muziq310@sina.com
+ * @Last Modified time: 2019-04-25 00:14:31
  */
 
-import { Sprite, Scene } from 'spritejs'
+import { Sprite, Scene } from '../../lightning/node_modules/spritejs'
 import { merge } from 'lodash'
-import { Tool } from '@/utils'
+import { Tool } from '../../lightning/node_modules/@/utils'
 import initOptions from './initOptions'
 
 export default class Bubble extends Tool {

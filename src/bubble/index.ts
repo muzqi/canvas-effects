@@ -3,21 +3,23 @@
  * @Date: 2018-07-16 14:30:27
  * @Description: 气泡
  * @Last Modified by: muziq310@sina.com
- * @Last Modified time: 2019-04-24 22:55:07
+ * @Last Modified time: 2019-04-25 00:29:03
  */
 
 import { merge } from 'lodash';
-import { Tool } from '../../utils';
+import { Tool } from '../utils';
 import Particle from './particle';
 import { BubbleInterface, optionsInterface, defaultOptions } from './declare';
 
 interface Bubble extends BubbleInterface {}
 
 class Bubble extends Tool {
-  private constructor(ele: string, options: optionsInterface = {}) {
+  public constructor(ele: string, options: optionsInterface = {}) {
     super(ele);
     this.createCanvas();
     this.options = merge(defaultOptions, options);
+
+    this.canvas.style.backgroundColor = this.options.bgcolor;
 
     this.particles = [];
   }

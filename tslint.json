@@ -15,6 +15,7 @@
     "no-magic-numbers": false,
     "no-empty-interface": false,
     "no-import-side-effect": false,
+    "no-var-requires": false,
     "class-name": false,
     "ordered-imports": false
   },

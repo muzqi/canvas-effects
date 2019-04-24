@@ -1,21 +1,19 @@
-import { Colors } from '../../utils';
-
+import { Colors } from '../utils';
 const { blue, orange, green } = Colors;
 
 export interface optionsInterface {
-  count?: number;
-  rRange?: Array<number>;
-
-  // 气泡的颜色
-  colors?: Array<string>;
-  speed?: number;
+  count?: number;          // 气泡的数量
+  rRange?: Array<number>;  // 气泡的半径区间
+  colors?: Array<string>;  // 气泡的颜色
+  bgcolor?: string;        // 画布的背景色
+  speed?: number;          // 冒泡的速度
 }
 
 export const defaultOptions: optionsInterface = {
   count: 100,
   rRange: [4, 12],
-  // 气泡的颜色
   colors: [blue, orange, green],
+  bgcolor: '#FFF',
   speed: 1,
 };
 
