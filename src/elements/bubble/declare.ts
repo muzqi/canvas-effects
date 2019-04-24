@@ -1,14 +1,14 @@
-import { Colors } from '../../utils'
+import { Colors } from '../../utils';
 
-const { blue, orange, green } = Colors
+const { blue, orange, green } = Colors;
 
 export interface optionsInterface {
-  count: number,
-  rRange: Array<number>,
+  count?: number;
+  rRange?: Array<number>;
 
   // 气泡的颜色
-  colors: Array<string>,
-  speed: number,
+  colors?: Array<string>;
+  speed?: number;
 }
 
 export const defaultOptions: optionsInterface = {
@@ -16,8 +16,8 @@ export const defaultOptions: optionsInterface = {
   rRange: [4, 12],
   // 气泡的颜色
   colors: [blue, orange, green],
-  speed: 1
-}
+  speed: 1,
+};
 
 export interface BubbleInterface {
   createCanvas: (dpi?: number) => void;
@@ -29,10 +29,20 @@ export interface ParticleInterface {
   canvas: any;
   context: any;
   speed: number;
-  color: string;
+  color?: string;
   r: number;
   x: number;
   y: number;
   ox: number;
   exp: boolean;
+}
+
+export interface ParticleConstructorInterface {
+  canvas: any;
+  context: any;
+  speed: number;
+  colors: Array<string>;
+  rRange: Array<any>;
+  x: number;
+  y: number;
 }
